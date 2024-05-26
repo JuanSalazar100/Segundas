@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Página dedicada a la venta de armables de todo tipo"/>
+    <meta name="author" content="Segundas" />
+    <meta name="publisher" content="ITA" />
+    <meta name="keywords" content="Brick Shop, Legos, Armables" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("fondologin.png");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Establece el posicionamiento relativo */
+        }
+
+        /* Capa semi-transparente sobre el fondo */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Color semi-transparente */
+        }
+
+        .form-container {
+            background-color: #fbfeff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 300px;
+            z-index: 1; /* Asegura que el formulario esté por encima de la capa semi-transparente */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #3c87de;
+        }
+
+        input[type="submit"] {
+            background-color: #3c87de;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3068b8;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function validarCredenciales() {
+            var usuario = document.getElementById("username").value;
+            var contraseña = document.getElementById("password").value;
+
+            if (usuario === "Admin" && contraseña === "admin") {
+                window.location.href = "panelAdmin.html";
+            } else {
+                document.getElementById("error-msg").innerText = "Usuario o contraseña incorrectos";
+            }
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <!-- Capa semi-transparente -->
+    <div class="overlay"></div>
+    
+    <div class="form-container">
+        <h2>Inicio de Sesión Administrador</h2>
+        <form onsubmit="return validarCredenciales()">
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Usuario"
+                required
+            />
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Contraseña"
+                required
+            />
+            <input type="submit" value="Iniciar Sesión" />
+            <div class="error-message" id="error-msg"></div>
+        </form>
+    </div>
+</body>
+</html>

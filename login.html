@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description"       content="Pagina dedicada a la venta de armables de todo tipo"/>
+    <meta name="author" content="Segundas" />
+    <meta name="publisher" content="ITA" />
+    <meta name="keywords" content="Brick Shop, Legos, Armables" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("fondologin.png");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between; /* Alinea los elementos hacia los extremos */
+            align-items: center;
+            width: 80%;
+            position: relative; /* Establece el posicionamiento relativo */
+        }
+
+        .form-container {
+            background-color: #fbfeff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgb(254, 246, 246);
+            padding: 50px;
+            width: 300px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 20px;
+            margin: 1px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3c87de;
+            color: #fff;
+            cursor: pointer;
+        }
+
+                /* Capa semi-transparente sobre el fondo */
+                .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Color semi-transparente */
+        }
+
+        .form-container {
+            background-color: #fbfeff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 300px;
+            z-index: 1; /* Asegura que el formulario esté por encima de la capa semi-transparente */
+        }
+
+        .hidden-button {
+            position: absolute; /* Establece el posicionamiento absoluto */
+            top: 10px;
+            right: -70px; /* Mueve el botón fuera del contenedor */
+            background-color: #3c87de;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: right 0.3s; /* Agrega una transición para animar el movimiento */
+        }
+
+        .hidden-button:hover {
+            right: 0; /* Muestra el botón cuando se pasa el cursor sobre él */
+        }
+
+        h2 {
+            color: rgb(73, 63, 63);
+        }
+    </style>
+    <script>
+        function validarCredenciales() {
+            // Obtener los valores de usuario y contraseña del formulario
+            var usuario = document.getElementById("username").value;
+            var contraseña = document.getElementById("password").value;
+            window.location.href = "index.html";
+
+
+            // Evitar que el formulario se envíe normalmente
+            return false;
+        }
+    </script>
+</head>
+<body>
+  <div class="overlay"></div>
+    <div class="container">
+        <div class="form-container">
+            <form onsubmit="return validarCredenciales()">
+                <h2>Ingresa tu correo y contraseña para iniciar sesión</h2>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Usuario"
+                    required
+                />
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Contraseña"
+                    required
+                />
+                <input type="submit" value="Iniciar Sesión" />
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="registro.html" method="get">
+                <h2>¿Aún no tienes cuenta?</h2>
+                <input type="submit" value="Registrarse" />
+            </form>
+        </div>
+
+        <!-- Botón de "Login Admin" -->
+        <button class="hidden-button" onclick="window.location.href='loginAdmin.html'">Login Admin</button>
+    </div>

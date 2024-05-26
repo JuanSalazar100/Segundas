@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Rosas",
+      "description": "Estas flores son el regalo perfecto por San Valentín, por el Día de la Madre o para hacerle saber a una persona cuánto la aprecias. Además, alegrarán la vista con un precioso estallido de color cuando las coloques en un jarrón. ",
+      "price": 349,
+      "stock": 50,
+      "category": "Flores",
+      "link": "Productos/Producto1.html",
+      "thumbnail": "https://m.media-amazon.com/images/I/71ecATiU6pL._AC_UF894,1000_QL80_.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/1/1.jpg",
+        "https://cdn.dummyjson.com/product-images/1/2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Ramo de flores silvestres",
+      "description": "El Ramo de Flores Silvestres LEGO® Icons (10313) aporta un toque de creatividad a un regalo intemporal. ¿Por qué no celebrar una ocasión especial entregándole a un ser querido unas flores que no se marchitarán ni tendrá que regar nunca?",
+      "price": 1499,
+      "stock": 50,
+      "category": "Flores",
+      "link": "Productos/Producto2.html",
+      "thumbnail": "https://lego.juguetron.mx/media/catalog/product/1/0/10313_box1_v39.png?optimize=high&fit=bounds&height=560&width=560&format=jpeg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/2/1.jpg",
+        "https://cdn.dummyjson.com/product-images/2/2.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Plantas diminutas",
+      "description": "El proyecto de construcción LEGO® Icons Plantas Diminutas (10329) está compuesto por representaciones de especies áridas, tropicales y carnívoras, cada una colocada en una maceta construible de color terracota.",
+      "price": 1299,
+      "stock": 50,
+      "category": "Flores",
+      "link": "Productos/Producto3.html",
+      "thumbnail": "https://www.brickmo.com/media/image/ca/15/d7/LEGO_Icons_10329_Mini_Pflanzen_10329_BRICKMO_online_Pflanzen_bestellen_BRICKMO_online_Sets_kaufen_BRICKMO_online_Blumen_bestellen_NBRICKMO_LEGO_kaufen_BRICKMO_1RNDdsRxFEBtNe_1280x1280.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/2/1.jpg",
+        "https://cdn.dummyjson.com/product-images/2/2.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Bonsai",
+      "description": "El arte de cultivar bonsáis ha cautivado a los amantes de los árboles. Ahora puedes rendir homenaje a este arte milenario con el kit de construcción. Disfruta de una agradable sensación de calma mientras das forma a tu Bonsái de hojas verdes o flores de cerezo rosas.",
+      "price": 1299,
+      "stock": 50,
+      "category": "Flores",
+      "link": "Productos/Producto4.html",
+      "thumbnail": "https://juguetibici.com/cdn/shop/products/LEG2806_001_1000x.jpg?v=1625159956",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/4/1.jpg",
+        "https://cdn.dummyjson.com/product-images/4/2.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Gran Piramide de Giza",
+      "description": "Da un salto atrás imaginario en el tiempo hasta el siglo XXVI a. C. y descubre cómo se erigió una de las siete maravillas del Mundo Antiguo con el set LEGO® Architecture Gran Pirámide de Guiza (21058).",
+      "price": 3499,
+      "stock": 50,
+      "category": "Arquitectura",
+      "link": "Productos/Producto5.html",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlkHUOwGpqlZfQ9VjS8IUxpu1ApBoBat-U3XYCZ1xJxA&s",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/5/1.jpg",
+        "https://cdn.dummyjson.com/product-images/5/2.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Taj Mahal",
+      "description": "Tanto si has tenido la suerte de estar en el Taj Mahal como si sueñas con visitarlo algún día o simplemente sabes apreciar los edificios elegantes, este set LEGO® Architecture Landmarks Collection (21056) te encantará.",
+      "price": 2999,
+      "stock": 50,
+      "category": "Arquitectura",
+      "link": "Productos/Producto6.html",
+      "thumbnail": "https://images.stockx.com/images/LEGO-Creator-Expert-Taj-Mahal-Set-10189.jpg?fit=fill&bg=FFFFFF&w=480&h=320&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1643043532&q=60",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/6/1.png",
+        "https://cdn.dummyjson.com/product-images/6/2.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Estatua de la Libertad",
+      "description": "Celebra una monumental mezcla de arquitectura y arte escultórico con el set LEGO® Architecture Estatua de la Libertad (21042). El emblemático símbolo de la libertad de los Estados Unidos, erigido en la isla de la Libertad",
+      "price": 2999,
+      "stock": 50,
+      "category": "Arquitectura",
+      "link": "Productos/Producto7.html",
+      "thumbnail": "https://lego.juguetron.mx/media/catalog/product/2/1/21042-box1-v39_6pacjzy1qreh0fsf.jpg?optimize=high&fit=bounds&height=560&width=560",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/7/1.jpg",
+        "https://cdn.dummyjson.com/product-images/7/2.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "EVA y WALL•E",
+      "description": "Cautiva a tu peque de 10 años o más, o a cualquier fan de la película, con este icónico set BrickHeadz™ que incluye figuras LEGO® construibles de los personajes Disney•Pixar EVA y WALL•E (40619).",
+      "price": 359,
+      "stock": 50,
+      "category": "BrickHeadz",
+      "link": "Productos/Producto8.html",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDYPAOICmadgKsytSngjUyNKTnxeA-jY8HXSGw-k74lg&s",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/8/1.jpg",
+        "https://cdn.dummyjson.com/product-images/8/2.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Stitch",
+      "description": "Esta figura de juguete construible Disney en versión BrickHeadz™ presenta al simpático y travieso Stitch de Lilo & Stitch, la película de Disney. El entrañable personaje incorpora detalles de gran autenticidad en 5 tonalidades distintas de azul.",
+      "price": 249,
+      "stock": 50,
+      "category": "BrickHeadz",
+      "link": "Productos/Producto9.html",
+      "thumbnail": "https://lego.juguetron.mx/media/catalog/product/4/0/40674_box1_v39.png?optimize=high&fit=bounds&height=560&width=560&format=jpeg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/9/1.jpg",
+        "https://cdn.dummyjson.com/product-images/9/2.png"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "100 Aniversario de Disney",
+      "description": "Celebra con tu peque de 10 años o más el cumpleaños de Disney construyendo el set LEGO® BrickHeadz™ | Disney 100 Aniversario de Disney (40622). Incluye a Oswald el Conejo Afortunado, Mickey Mouse, Blancanieves y Campanilla ",
+      "price": 999,
+      "stock": 50,
+      "category": "BrickHeadz",
+      "link": "Productos/Producto10.html",
+      "thumbnail": "https://www.lego.com/cdn/cs/set/assets/bltd0232afe9dada9da/40622_alt1.png",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/10/1.jpg",
+        "https://cdn.dummyjson.com/product-images/10/2.jpg"
+      ]
+    }
+  ]
+}

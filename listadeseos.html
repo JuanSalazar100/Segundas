@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Deseos</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+
+    .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+    /* Cambiar el color del botón "Comprar" */
+    .btn-primary {
+      background-color: #000 !important;
+      border-color:   #000 !important;
+    }
+
+    /* Cambiar el color del icono del carrito */
+    .fas.fa-shopping-cart {
+      color: #1b00ca !important;
+    }
+
+    /* Cambiar el color del icono del corazón */
+    .fas.fa-heart {
+      color: #910000 !important;
+    }
+    /* Estilos para las opciones de filtro */
+.form-control#sort-order {
+color: #000000; /* Color del texto */
+background-color: #e1e102; /* Color de fondo */
+}
+
+/* Estilos para el botón "Buscar" */
+.btn-outline-light#submit-btn {
+color: #000000 !important; /* Color del texto */
+background-color: #e1e102 !important; /* Color de fondo */
+border-color: #000000 !important; /* Color del borde */
+}
+
+.btn-outline-light#submit-btn:hover {
+color: #e1e102 !important; /* Color del texto al pasar el cursor */
+background-color: #000000 !important; /* Color de fondo al pasar el cursor */
+border-color: #e1e102 !important; /* Color del borde al pasar el cursor */
+}
+
+
+    header.bg-primary {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    body {
+      background-color: #e5e5e5 !important;
+    }
+
+    /* Estilos personalizados */
+    .navbar-brand img {
+      margin-right: 20px;
+      background-color: #ffffff;
+      color: #eaeff5;
+    }
+
+    .navbar {
+      background-color: #e1e102 !important;
+      color: #000000 !important;
+      margin: 10px 0; /* Añadir margen */
+      border: 2px solid #000; /* Borde negro */
+    }
+
+    .card {
+      transition: transform 0.3s;
+      background-color: #fff;
+      color: #000;
+      border: 2px solid #e1e102; /* Borde amarillo */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .card-footer {
+      padding: 10px;
+      background-color: #f7f7f7;
+      border-top: 1px solid #e1e1e1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-footer .btn {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #e1e102;
+      border-color: #e1e102;
+      color: #ffffff;
+    }
+
+    .card-footer .btn:hover {
+      background-color: #000;
+      border-color: #000;
+      color: #e1e102;
+    }
+
+    .footer {
+      background-color: #000000 !important;
+      color: #e1e102 !important;
+    }
+
+    .cookie-message {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 80%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    #accept-cookie {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .navbar-toggler-icon {
+background-color: #fff; /* Cambiar el color del icono de la hamburguesa */
+border: 2px solid #000; /* Añadir un borde al icono para mejor visibilidad */
+padding: 5px; /* Ajustar el espacio alrededor del icono */
+}
+
+.navbar-toggler {
+border: 2px solid #000; /* Añadir un borde al botón de navegación */
+}
+
+    .navbar-nav .nav-item .nav-link {
+      color: #000000 !important;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      color: #000000 !important;
+    }
+
+    .form-control {
+      color: #000000;
+      background-color: #e1e102;
+    }
+
+    .btn-outline-light {
+      color: #000000 !important;
+      background-color: #e1e102 !important;
+      border-color: #000000 !important;
+    }
+
+    .btn-outline-light:hover {
+      color: #e1e102 !important;
+      background-color: #000000 !important;
+      border-color: #e1e102 !important;
+    }
+   /* Estilos personalizados */
+    .navbar-brand img {
+      margin-right: 20px;
+      background-color: #537faa;
+      color: #74a3d9;
+    }
+
+    .navbar {
+      background-color: #e1e102 !important;
+      color: #000000 !important;
+    }
+
+    .btn-primary {
+      background-color: #000 !important;
+      border-color: #000 !important;
+    }
+
+    /* Cambiar el color del icono del carrito */
+    .fas.fa-shopping-cart {
+      color: #1b00ca !important;
+    }
+
+    /* Cambiar el color del icono del corazón */
+    .fas.fa-heart {
+      color: #910000 !important;
+    }
+
+    .card {
+      transition: transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 15px 0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .footer {
+      background-color: #000000 !important;
+      color: #e1e102 !important;
+    }
+
+    .review-form {
+      margin-top: 30px;
+    }
+
+      /* Estilos para la tabla de deseos */
+      .table thead th {
+        border-top: none;
+        border-bottom: 2px solid #000;
+        color: #000;
+        font-weight: bold;
+      }
+
+      .table tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      .table tbody td {
+        vertical-align: middle;
+      }
+
+      .product-thumbnail {
+        max-width: 50px; /* Tamaño máximo */
+        max-height: 50px; /* Tamaño máximo */
+      }
+  </style>
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Logotipo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+        Brick Shop
+      </a>
+      <!-- Botón para dispositivos móviles -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorías 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="index.html">Ver todos los productos</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Perfil 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+              <a class="dropdown-item" href="registro.html">Registro</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html">Inicio de Sesión</a>
+            </div>
+          </li>
+        </ul>
+        <!-- Lista de deseos y carrito de compras -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="far fa-heart"></i></a>
+          </li>
+          <li class="nav-item">
+
+           <a class="nav-link" href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+        <!-- Formulario de búsqueda -->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos" aria-label="Buscar">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        <a href="https://www.facebook.com/profile.php?id=61558172912882&is_tour_dismissed" class="btn" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Icono de Facebook" style="width: 40px; height: 40px; vertical-align: middle;">
+      
+          </a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container mt-5">
+    <h2 class="mb-4">Lista de Deseos</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Borrar</th>
+              </tr>
+            </thead>
+            <tbody id="wishlist-items">
+              <!-- Aquí se generan dinámicamente los elementos de la lista de deseos -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery y Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    var wishlist = [];
+    $(document).ready(function(){
+    var wishlistItems = $('#wishlist-items');
+    // Obtiene la lista de deseos del localStorage
+    wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    // Itera sobre los productos en la lista de deseos y los agrega a la tabla
+    wishlist.forEach(function(product){
+        var row = '<tr>';
+        row += '<td><img src="' + product.thumbnail + '" alt="' + product.title + '" class="product-thumbnail"></td>';
+        row += '<td>' + product.title + '</td>';
+        row += '<td>' + product.description + '</td>';
+        row += '<td>$' + product.price.toFixed(2) + '</td>';
+        row += '<td>' + product.category + '</td>';
+        row += '<td><button class="btn btn-danger btn-sm" onclick="removeFromWishlist(' + product.id + ')">Eliminar</button></td>';
+        row += '</tr>';
+        wishlistItems.append(row);
+    });
+    });
+
+
+    // Función para eliminar un producto de la lista de deseos
+    function removeFromWishlist(productId){
+    // Encuentra el índice del producto en la lista de deseos
+    var index = wishlist.findIndex(function(product){
+        return product.id === productId;
+    });
+    
+    if(index !== -1){
+        // Elimina el producto del arreglo wishlist
+        wishlist.splice(index, 1);
+        // Actualiza el localStorage con la nueva lista de deseos
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        // Elimina la fila de la tabla de deseos
+        $('#wishlist-items').empty();
+        // Vuelve a generar las filas de la tabla con la lista actualizada de deseos
+        wishlist.forEach(function(product){
+            var row = '<tr>';
+            row += '<td><img src="' + product.thumbnail + '" alt="' + product.title + '" class="product-thumbnail"></td>';
+            row += '<td>' + product.title + '</td>';
+            row += '<td>' + product.description + '</td>';
+            row += '<td>$' + product.price.toFixed(2) + '</td>';
+            row += '<td>' + product.category + '</td>';
+            row += '<td><button class="btn btn-danger btn-sm" onclick="removeFromWishlist(' + product.id + ')">Eliminar</button></td>';
+            row += '</tr>';
+            $('#wishlist-items').append(row);
+        });
+    }
+    }
+  </script>
+</body>
+</html>
